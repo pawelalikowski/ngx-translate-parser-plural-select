@@ -190,7 +190,7 @@ export class TranslateICUCustomParser {
 		key = '';
 		do {
 			key += keys.shift();
-			if(target != null && target[key] != null && (typeof target[key] === 'object' || !keys.length)) {
+			if(target != null && target != undefined && target[key] != null && target[key] != undefined && (typeof target[key] === 'object' || !keys.length)) {
 				target = target[key];
 				key = '';
 			} else if(!keys.length) {
